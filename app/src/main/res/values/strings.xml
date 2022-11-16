@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">The EWC</string>
+    <string name="glossary">Glossary</string>
+    <string name="videos">Videos</string>
+    <string name="video_thumbnail">video thumbnail</string>
+</resources>
