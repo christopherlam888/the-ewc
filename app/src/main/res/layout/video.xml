@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:layout_margin="4dp"
+        android:background="@color/white"
         android:contentDescription="@string/video_thumbnail"
         android:padding="8dp"
         android:scaleType="centerInside"
