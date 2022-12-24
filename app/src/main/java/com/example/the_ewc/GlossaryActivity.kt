@@ -2,6 +2,7 @@ package com.example.the_ewc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
 import java.io.IOException
@@ -17,6 +18,9 @@ class GlossaryActivity : AppCompatActivity() {
         if (glossary.isEmpty()) {
             glossaryReadJson()
         }
+
+        val glossaryHeaderTextView = findViewById<TextView>(R.id.glossary_header)
+        glossaryHeaderTextView.text = "Glossary"
 
         val recyclerView = findViewById<RecyclerView>(R.id.glossary_recycler_view)
         recyclerView.adapter = GlossaryAdapter(this, glossary)

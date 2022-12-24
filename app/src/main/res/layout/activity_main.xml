@@ -8,24 +8,34 @@
 
     <ImageView
         android:id="@+id/ewc_logo"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="43dp"
         android:src="@drawable/logo"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="335dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
         android:orientation="vertical"
-        android:background="@drawable/background">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ewc_logo">
 
         <ImageButton
             android:id="@+id/glossary_button"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="35dp"
             android:layout_marginLeft="35dp"
+            android:layout_marginTop="35dp"
             android:layout_marginRight="35dp"
             android:background="@drawable/rounded_corner"
             android:src="@drawable/glossaryicon"
@@ -36,21 +46,21 @@
             android:id="@+id/glossary_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:gravity="center_horizontal"
             android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
             android:padding="10dp"
-            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Glossary" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/videos_button"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="35dp"
             android:background="@drawable/rounded_corner"
             android:src="@drawable/videoicon"
@@ -58,16 +68,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/video_title"
+            android:id="@+id/videos_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:gravity="center_horizontal"
             android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
             android:padding="10dp"
             android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Videos" />
+            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
