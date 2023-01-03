@@ -4,7 +4,8 @@
     android:shape="rectangle" >
 
     <corners
-        android:radius="15dp" />
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" />
 
     <stroke
         android:width="0.5dp"
