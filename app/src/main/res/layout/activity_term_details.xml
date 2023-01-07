@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".TermDetailsActivity">
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_2"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="The EWC"/>
+
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linearLayoutTerm"
         android:layout_width="0dp"
@@ -72,7 +88,7 @@
         android:id="@+id/term_details_term"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="70sp"
         android:textSize="35sp"
         android:textStyle="bold"
         android:textColor="@color/black_1"
