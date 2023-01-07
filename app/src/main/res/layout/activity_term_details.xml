@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20sp"
         android:textSize="20sp"
+        android:textColor="@color/black_2"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutTerm"
         app:layout_constraintStart_toStartOf="@+id/insideTerm"
         app:layout_constraintEnd_toEndOf="@+id/insideTerm"
