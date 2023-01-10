@@ -2,6 +2,7 @@ package com.example.the_ewc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
 import java.io.IOException
@@ -17,6 +18,9 @@ class VideosActivity : AppCompatActivity() {
         if (videos.isEmpty()) {
             videosReadJson()
         }
+
+        val videosHeaderTextView = findViewById<TextView>(R.id.videos_header)
+        videosHeaderTextView.text = "Videos"
 
         val recyclerView = findViewById<RecyclerView>(R.id.videos_recycler_view)
         recyclerView.adapter = VideosAdapter(this, videos)

@@ -6,34 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".TermDetailsActivity">
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_2"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="The EWC"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTerm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/term_details_category">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/insideTerm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/rounded_corner_2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutTerm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutTerm"
+        app:layout_constraintTop_toTopOf="@+id/linearLayoutTerm">
+        </LinearLayout>
 
     <TextView
         android:id="@+id/term_details_definition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/insideTerm"
+        app:layout_constraintEnd_toEndOf="@+id/insideTerm"
+        app:layout_constraintStart_toStartOf="@+id/insideTerm"
+        app:layout_constraintTop_toTopOf="@+id/insideTerm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="definition" />
 
     <TextView
         android:id="@+id/term_details_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/term_details_definition"
+        android:layout_marginBottom="20sp"
+        android:textSize="20sp"
+        android:textColor="@color/black_2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutTerm"
+        app:layout_constraintStart_toStartOf="@+id/insideTerm"
+        app:layout_constraintEnd_toEndOf="@+id/insideTerm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/term_details_term"
         tools:text="category" />
 
     <TextView
         android:id="@+id/term_details_term"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/term_details_definition"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="70sp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/black_1"
+        app:layout_constraintStart_toStartOf="@+id/insideTerm"
+        app:layout_constraintEnd_toEndOf="@+id/insideTerm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/term_details_category"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="term" />
 </androidx.constraintlayout.widget.ConstraintLayout>
