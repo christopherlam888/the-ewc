@@ -19,9 +19,6 @@ class VideosActivity : AppCompatActivity() {
             videosReadJson()
         }
 
-        val videosHeaderTextView = findViewById<TextView>(R.id.videos_header)
-        videosHeaderTextView.text = "Videos"
-
         val recyclerView = findViewById<RecyclerView>(R.id.videos_recycler_view)
         recyclerView.adapter = VideosAdapter(this, videos)
         recyclerView.setHasFixedSize(true)

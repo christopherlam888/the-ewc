@@ -23,9 +23,6 @@ class GlossaryActivity : AppCompatActivity() {
 
         glossarySelected = glossary
 
-        val glossaryHeaderTextView = findViewById<TextView>(R.id.glossary_header)
-        glossaryHeaderTextView.text = "Glossary"
-
         val recyclerView = findViewById<RecyclerView>(R.id.glossary_recycler_view)
         val adapter = GlossaryAdapter(this, glossarySelected)
         recyclerView.adapter = adapter
@@ -35,30 +32,19 @@ class GlossaryActivity : AppCompatActivity() {
         val buttonBrands = findViewById<ImageButton>(R.id.buttonBrands)
         val buttonGeneral = findViewById<ImageButton>(R.id.buttonGeneral)
         buttonAll.setOnClickListener{
-            var selected = arrayListOf<Term>()
-            selected = glossary
+            val selected = glossary
             glossarySelected = glossary
             adapter.updateData(selected)
             adapter.notifyDataSetChanged()
         }
         buttonBrands.setOnClickListener{
-            var selected = arrayListOf<Term>()
-            for (term in glossary) {
-                if (term.category == "brand") {
-                    selected.add(term)
-                }
-            }
+            val selected = glossary.filter { it.category == "brand" } as ArrayList<Term>
             glossarySelected = selected
             adapter.updateData(selected)
             adapter.notifyDataSetChanged()
         }
         buttonGeneral.setOnClickListener{
-            var selected = arrayListOf<Term>()
-            for (term in glossary) {
-                if (term.category == "general") {
-                    selected.add(term)
-                }
-            }
+            val selected = glossary.filter { it.category == "general" } as ArrayList<Term>
             glossarySelected = selected
             adapter.updateData(selected)
             adapter.notifyDataSetChanged()

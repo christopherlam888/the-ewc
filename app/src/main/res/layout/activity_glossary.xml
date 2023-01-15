@@ -6,9 +6,7 @@
     android:background="@drawable/background_2"
     tools:context=".MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -37,7 +35,8 @@
             android:layout_marginEnd="30dp"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:text="@string/glossary_header"/>
 
         <ImageButton
             android:id="@+id/buttonAll"
