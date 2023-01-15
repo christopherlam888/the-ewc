@@ -31,7 +31,14 @@ class VideosAdapter(
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
         val item = dataset[position]
         holder.textView.text = item.title
-        val thumbnailId = context.resources.getIdentifier(item.thumbnail, "drawable", context.packageName)
+        var thumbnail = ""
+        if (item.thumbnail.isEmpty()) {
+            thumbnail = "thumbnail"
+        }
+        else {
+            thumbnail = item.thumbnail
+        }
+        val thumbnailId = context.resources.getIdentifier(thumbnail, "drawable", context.packageName)
         holder.imageButton.setImageResource(thumbnailId)
         holder.imageButton.setOnClickListener{
             val queryUrl: Uri = Uri.parse(item.url)
