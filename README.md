@@ -6,21 +6,20 @@ A 2-in-1 app displaying a glossary of watch terms and a videos list, all brought
 
 Screenshots:
 
-![1](https://user-images.githubusercontent.com/85356197/211454114-c211c349-46a7-4ea9-b059-9a0746b42318.png)
+![1](https://user-images.githubusercontent.com/85356197/212551347-1ab4b5e4-3c9c-4eed-bda7-635cc65a0ad1.png)
 
-![2](https://user-images.githubusercontent.com/85356197/211454170-5d986632-e0ca-4bc3-8877-f341c7c51f5c.png)
+![2](https://user-images.githubusercontent.com/85356197/212551352-21159c1c-292c-479e-99bd-b9e59d2fc354.png)
 
-![3](https://user-images.githubusercontent.com/85356197/211454178-21648cdd-7485-4c11-b1a4-b653cad33654.png)
+![3](https://user-images.githubusercontent.com/85356197/212551355-f6101cae-caac-4c61-9b2c-d375c4e2ccf4.png)
 
-![4](https://user-images.githubusercontent.com/85356197/211454187-265cd3a9-ead6-46dc-b2f9-adf941f6c582.png)
+![4](https://user-images.githubusercontent.com/85356197/212551356-0e60b2d2-4bce-45ba-a212-fad5df3f8af2.png)
 
 ***
 
 Features to implement:
 - Improve navigation between pages (add back button)
-- Enhance glossary experience with search and filter by category
+- Enhance glossary experience with search
 - Bookmark favourite glossary terms
-- Placeholder for videos without thumbnails
 
 ***
 
