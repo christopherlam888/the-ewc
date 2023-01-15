@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,16 +22,54 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/glossary_header"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/white" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/glossary_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/buttonAll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_all"
+            android:background="@drawable/rounded_corner"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/buttonBrands"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_brands"
+            android:background="@drawable/rounded_corner"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/buttonGeneral"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_general"
+            android:background="@drawable/rounded_corner"
+            app:tint="@color/white" />
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/glossary_recycler_view"

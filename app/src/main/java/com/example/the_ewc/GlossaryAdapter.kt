@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class GlossaryAdapter(
     private val context: Context,
-    private val dataset: List<Term>
+    private var dataset: List<Term>
 ) : RecyclerView.Adapter<GlossaryAdapter.GlossaryViewHolder>() {
 
     class GlossaryViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
@@ -39,4 +39,9 @@ class GlossaryAdapter(
     }
 
     override fun getItemCount() = dataset.size
+
+    fun updateData(newDataset: List<Term>) {
+        dataset = newDataset
+    }
+
 }
