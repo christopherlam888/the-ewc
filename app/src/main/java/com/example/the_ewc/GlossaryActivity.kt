@@ -3,7 +3,6 @@ package com.example.the_ewc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
 import java.io.IOException

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class VideosAdapter(
     private val context: Context,
-    private val dataset: List<Video>
+    private var dataset: List<Video>
 ) : RecyclerView.Adapter<VideosAdapter.VideoViewHolder>() {
 
     class VideoViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
@@ -48,4 +48,8 @@ class VideosAdapter(
     }
 
     override fun getItemCount() = dataset.size
+
+    fun updateData(newDataset: List<Video>) {
+        dataset = newDataset
+    }
 }
