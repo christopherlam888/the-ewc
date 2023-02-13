@@ -20,46 +20,52 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 class VideosInstrumentedTest {
-  @get:Rule() val activity = ActivityScenarioRule(MainActivity::class.java)
-  @Test
-  fun check_video() {
-    onView(withId(R.id.videos_button)).perform(click())
-    onView(withId(R.id.videos_recycler_view))
-      .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
-      .check(matches(hasDescendant(withText(videos[0].title))))
-  }
-  @Test
-  fun check_random_video() {
-    onView(withId(R.id.videos_button)).perform(click())
-    val idx = (0 until videos.size).random()
-    onView(withId(R.id.videos_recycler_view))
-      .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(idx))
-      .check(matches(hasDescendant(withText(videos[idx].title))))
-  }
-  @Test
-  fun check_video_reversed() {
-    onView(withId(R.id.videos_button)).perform(click())
-    onView(withId(R.id.buttonReverse)).perform(click())
-    onView(withId(R.id.videos_recycler_view))
-      .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
-      .check(matches(hasDescendant(withText(videos[0].title))))
-  }
-  @Test
-  fun check_random_video_reversed() {
-    onView(withId(R.id.videos_button)).perform(click())
-    onView(withId(R.id.buttonReverse)).perform(click())
-    val idx = (0 until videos.size).random()
-    onView(withId(R.id.videos_recycler_view))
-      .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(idx))
-      .check(matches(hasDescendant(withText(videos[idx].title))))
-  }
-  @Test
-  fun check_video_reversed_forward() {
-    onView(withId(R.id.videos_button)).perform(click())
-    onView(withId(R.id.buttonReverse)).perform(click())
-    onView(withId(R.id.buttonForward)).perform(click())
-    onView(withId(R.id.videos_recycler_view))
-      .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
-      .check(matches(hasDescendant(withText(videos[0].title))))
-  }
+    @get:Rule()
+    val activity = ActivityScenarioRule(MainActivity::class.java)
+
+    @Test
+    fun check_video() {
+        onView(withId(R.id.videos_button)).perform(click())
+        onView(withId(R.id.videos_recycler_view))
+            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
+            .check(matches(hasDescendant(withText(videos[0].title))))
+    }
+
+    @Test
+    fun check_random_video() {
+        onView(withId(R.id.videos_button)).perform(click())
+        val idx = (0 until videos.size).random()
+        onView(withId(R.id.videos_recycler_view))
+            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(idx))
+            .check(matches(hasDescendant(withText(videos[idx].title))))
+    }
+
+    @Test
+    fun check_video_reversed() {
+        onView(withId(R.id.videos_button)).perform(click())
+        onView(withId(R.id.buttonReverse)).perform(click())
+        onView(withId(R.id.videos_recycler_view))
+            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
+            .check(matches(hasDescendant(withText(videos[0].title))))
+    }
+
+    @Test
+    fun check_random_video_reversed() {
+        onView(withId(R.id.videos_button)).perform(click())
+        onView(withId(R.id.buttonReverse)).perform(click())
+        val idx = (0 until videos.size).random()
+        onView(withId(R.id.videos_recycler_view))
+            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(idx))
+            .check(matches(hasDescendant(withText(videos[idx].title))))
+    }
+
+    @Test
+    fun check_video_reversed_forward() {
+        onView(withId(R.id.videos_button)).perform(click())
+        onView(withId(R.id.buttonReverse)).perform(click())
+        onView(withId(R.id.buttonForward)).perform(click())
+        onView(withId(R.id.videos_recycler_view))
+            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
+            .check(matches(hasDescendant(withText(videos[0].title))))
+    }
 }

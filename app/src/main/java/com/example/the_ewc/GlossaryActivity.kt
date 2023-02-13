@@ -30,19 +30,19 @@ class GlossaryActivity : AppCompatActivity() {
         val buttonAll = findViewById<ImageButton>(R.id.buttonAll)
         val buttonBrands = findViewById<ImageButton>(R.id.buttonBrands)
         val buttonGeneral = findViewById<ImageButton>(R.id.buttonGeneral)
-        buttonAll.setOnClickListener{
+        buttonAll.setOnClickListener {
             val selected = glossary
             glossarySelected = glossary
             adapter.updateData(selected)
             adapter.notifyDataSetChanged()
         }
-        buttonBrands.setOnClickListener{
+        buttonBrands.setOnClickListener {
             val selected = glossary.filter { it.category == "brand" } as ArrayList<Term>
             glossarySelected = selected
             adapter.updateData(selected)
             adapter.notifyDataSetChanged()
         }
-        buttonGeneral.setOnClickListener{
+        buttonGeneral.setOnClickListener {
             val selected = glossary.filter { it.category == "general" } as ArrayList<Term>
             glossarySelected = selected
             adapter.updateData(selected)
@@ -50,19 +50,24 @@ class GlossaryActivity : AppCompatActivity() {
         }
 
     }
+
     private fun glossaryReadJson() {
-        var json : String? = null
+        var json: String? = null
         try {
             val inputStream: InputStream = assets.open("glossary.json")
-            json = inputStream.bufferedReader().use{it.readText()}
+            json = inputStream.bufferedReader().use { it.readText() }
             val jsonArray = JSONArray(json)
             for (i in 0 until jsonArray.length()) {
                 val jsonObject = jsonArray.getJSONObject(i)
-                glossary.add(Term(jsonObject.getString("term"), jsonObject.getString("definition"), jsonObject.getString("category")))
+                glossary.add(
+                    Term(
+                        jsonObject.getString("term"),
+                        jsonObject.getString("definition"),
+                        jsonObject.getString("category")
+                    )
+                )
             }
-        }
-        catch (_: IOException)
-        {
+        } catch (_: IOException) {
         }
     }
 }

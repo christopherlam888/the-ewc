@@ -12,7 +12,10 @@ import org.junit.Assert.*
 class VideosUnitTest {
     @Test
     fun reverse_isCorrect() {
-        val videos = arrayListOf<Video>(Video("first", "first_thumbnail", "first_url"), Video("second", "second_thumbnail", "second_url"))
+        val videos = arrayListOf<Video>(
+            Video("first", "first_thumbnail", "first_url"),
+            Video("second", "second_thumbnail", "second_url")
+        )
         videos.reverse()
         assertEquals("second", videos[0].title)
     }

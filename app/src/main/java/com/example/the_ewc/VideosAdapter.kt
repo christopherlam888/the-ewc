@@ -34,13 +34,13 @@ class VideosAdapter(
         var thumbnail = ""
         if (item.thumbnail.isEmpty()) {
             thumbnail = "thumbnail"
-        }
-        else {
+        } else {
             thumbnail = item.thumbnail
         }
-        val thumbnailId = context.resources.getIdentifier(thumbnail, "drawable", context.packageName)
+        val thumbnailId =
+            context.resources.getIdentifier(thumbnail, "drawable", context.packageName)
         holder.imageButton.setImageResource(thumbnailId)
-        holder.imageButton.setOnClickListener{
+        holder.imageButton.setOnClickListener {
             val queryUrl: Uri = Uri.parse(item.url)
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
             context.startActivity(intent)

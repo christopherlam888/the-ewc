@@ -3,7 +3,6 @@ package com.example.the_ewc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
 import java.io.IOException
@@ -28,7 +27,7 @@ class VideosActivity : AppCompatActivity() {
 
         val buttonForward = findViewById<ImageButton>(R.id.buttonForward)
         val buttonReverse = findViewById<ImageButton>(R.id.buttonReverse)
-        buttonForward.setOnClickListener{
+        buttonForward.setOnClickListener {
             if (reversed) {
                 reversed = false
                 videos.reverse()
@@ -36,7 +35,7 @@ class VideosActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
         }
-        buttonReverse.setOnClickListener{
+        buttonReverse.setOnClickListener {
             if (!reversed) {
                 reversed = true
                 videos.reverse()
@@ -46,19 +45,24 @@ class VideosActivity : AppCompatActivity() {
         }
 
     }
+
     private fun videosReadJson() {
-        var json : String? = null
+        var json: String? = null
         try {
             val inputStream: InputStream = assets.open("videos.json")
-            json = inputStream.bufferedReader().use{it.readText()}
+            json = inputStream.bufferedReader().use { it.readText() }
             val jsonArray = JSONArray(json)
             for (i in 0 until jsonArray.length()) {
                 val jsonObject = jsonArray.getJSONObject(i)
-                videos.add(Video(jsonObject.getString("title"), jsonObject.getString("thumbnail"), jsonObject.getString("url")))
+                videos.add(
+                    Video(
+                        jsonObject.getString("title"),
+                        jsonObject.getString("thumbnail"),
+                        jsonObject.getString("url")
+                    )
+                )
             }
-        }
-        catch (_: IOException)
-        {
+        } catch (_: IOException) {
         }
     }
 }

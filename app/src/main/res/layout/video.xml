@@ -3,36 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10sp"
-    android:layout_marginBottom="10sp"
     android:layout_marginStart="20sp"
-    android:layout_marginEnd="20sp">
+    android:layout_marginTop="10sp"
+    android:layout_marginEnd="20sp"
+    android:layout_marginBottom="10sp">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_2"
-    android:orientation="vertical">
-    <ImageButton
-        android:id="@+id/video_image_button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210sp"
-        android:padding="15sp"
-        android:background="@drawable/rounded_corner"
-        android:contentDescription="@string/video_thumbnail"
-        android:scaleType="centerInside"
-        tools:src="@drawable/thumbnail1" />
+        android:layout_height="match_parent"
+        android:background="@drawable/background_2"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/video_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        tools:text="title" />
+        <ImageButton
+            android:id="@+id/video_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="210sp"
+            android:background="@drawable/rounded_corner"
+            android:contentDescription="@string/video_thumbnail"
+            android:padding="15sp"
+            android:scaleType="centerInside"
+            tools:src="@drawable/thumbnail1" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:text="title" />
+
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
