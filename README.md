@@ -11,10 +11,12 @@
 
 ## Features
 
+- Online and offline functionality
+  - Use online for the latest updates to glossary terms
 - 100+ Glossary entries of common watch terms
 - Filter watch terms by category (brand, general)
 - View community-sourced definitions
-- 40+ Videos from The Everyday Watch Collector (THe EWC)
+- 40+ Videos from The Everyday Watch Collector (The EWC)
 - Order videos chronologically
 - Launch videos in browser
 
