@@ -13,7 +13,7 @@ class NetworkRequest(private val context: Context) {
 
     fun getData(callback: (List<Term>) -> Unit) {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://christopherlam888.github.io/the-ewc-api/")
+            .baseUrl("https://drab-rose-yak-gear.cyclic.app/the-ewc/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
